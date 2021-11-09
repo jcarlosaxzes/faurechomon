@@ -36,6 +36,23 @@ Rolando Cubela,Tony Santiago,Raul Dias-Arguelles,Tavo Machin,Humberto Castello,e
 
         gtag('config', 'G-W28HKTJZRT');
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+
+        $(function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            //alert(urlParams.get('ln'));
+            if (urlParams.get('ln') == null) {
+                var language = navigator.language || navigator.userLanguage;
+                language = language.substring(0, 2);
+                if (language == "en") {
+                    window.location.href = 'en/index.html';
+                }
+            }
+        });
+
+    </script>
 </head>
 <body data-home-page-title="Faure Chomon" class="u-body">
     <section class="u-align-left u-clearfix u-image u-section-1" id="sec-d64f" data-image-width="1125" data-image-height="750">
